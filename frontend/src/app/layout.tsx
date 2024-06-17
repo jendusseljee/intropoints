@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Open_Sans } from 'next/font/google';
 import localFont from 'next/font/local';
 import './globals.css';
 
@@ -9,10 +9,10 @@ import Header from './Header';
 import NavBar from './NavBar';
 import NavBarButton from './NavBarButton';
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
-const thaliaFont = localFont({
-  src: '/Gill Sans Condensed.woff',
-  variable: '--font-thalia',
+const thaliaBody = Open_Sans({ variable: '--font-body' });
+const thaliaHeader = localFont({
+  src: './fonts/Gill Sans Condensed.woff',
+  variable: '--font-header',
 });
 
 export const metadata: Metadata = {
@@ -27,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${thaliaFont.variable} font-sans`}>
+      <body className={`${thaliaBody.variable} ${thaliaHeader.variable} font-sans`}>
         <div className="flex h-screen flex-col justify-between">
           <Header />
           {children}
