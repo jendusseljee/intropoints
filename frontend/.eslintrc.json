@@ -1,0 +1,30 @@
+{
+  "plugins": ["@typescript-eslint"],
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:@typescript-eslint/recommended",
+    "airbnb-base",
+    "airbnb/rules/react",
+    "airbnb-typescript",
+    "prettier",
+    "plugin:tailwindcss/recommended"
+  ],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "radix": "off",
+    "@next/next/no-html-link-for-pages": ["error", "./src/app"],
+    "tailwindcss/classnames-order": "error",
+    "react/require-default-props": "off",
+    "no-param-reassign": [
+      "error",
+      {
+        "props": true,
+        "ignorePropertyModificationsFor": ["state"]
+      }
+    ]
+  },
+  "ignorePatterns": ["*config.ts", "*.config.js", "*/**/stories/*"]
+}
