@@ -193,3 +193,5 @@ coverage
 
 backend/media/challenges
 backend/website/media
+
+**/.terraform/*
