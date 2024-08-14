@@ -27,3 +27,5 @@ RUN apt-get update && \
 
 
 COPY website /mentorpunten/src/website/
+
+RUN echo "* * * * * /usr/local/bin/python /mentorpunten/src/website/manage.py runcrons" > /crontab && crontab /crontab

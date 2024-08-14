@@ -15,6 +15,10 @@ cd /mentorpunten/src/website
 
 chown --recursive www-data:www-data /mentorpunten/
 
+printenv > /etc/environment
+
+cron
+
 echo "Starting uwsgi server."
 uwsgi --chdir=/mentorpunten/src/website \
     --module=mentorpunten.wsgi:application \
