@@ -41,7 +41,7 @@ function goBack() {
         </a>
       </div>
       <div class="col-10">
-        <h1 class="text-center">MENTORPUNTEN</h1>
+        <h1 class="text-center">INTROPOINTS</h1>
       </div>
       <div class="col-1 d-flex align-items-center">
         <router-link :to="{ name: 'Profile' }" v-if="CredentialsStore.loggedIn" class="text-white" style="text-decoration: none;">
